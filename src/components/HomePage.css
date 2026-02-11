@@ -1,0 +1,519 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f9ff;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2a5bd7;
+}
+
+.logo i {
+  margin-right: 10px;
+  color: #ff6b35;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #2a5bd7;
+}
+
+.sign-in-btn {
+  background-color: #2a5bd7;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.sign-in-btn:hover {
+  background-color: #1a4bc7;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(42, 91, 215, 0.1), rgba(255, 107, 53, 0.1));
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 10;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animated-text {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #2a5bd7;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: textAnimation 1.5s ease-out forwards;
+}
+
+.animated-text span {
+  color: #ff6b35;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ff6b35;
+  color: white;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(255, 107, 53, 0.4);
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  max-width: 700px;
+  z-index: 1;
+  opacity: 0.9;
+  border-radius: 20px 0 0 0;
+}
+
+/* Features Section */
+.features {
+  padding: 100px 5%;
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #2a5bd7;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #f8fbff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 5px solid #2a5bd7;
+}
+
+.feature-card:nth-child(2) {
+  border-top-color: #ff6b35;
+}
+
+.feature-card:nth-child(3) {
+  border-top-color: #3acf99;
+}
+
+.feature-card:nth-child(4) {
+  border-top-color: #ffc107;
+}
+
+.feature-card:nth-child(5) {
+  border-top-color: #9c27b0;
+}
+
+.feature-card:nth-child(6) {
+  border-top-color: #2196f3;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feature-desc {
+  color: #666;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 100px 5%;
+  background-color: #f8fbff;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faq-question {
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2a5bd7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  padding: 0 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 30px 25px;
+  max-height: 300px;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+/* Footer */
+.footer {
+  background-color: #1a3a8f;
+  color: white;
+  padding: 60px 5% 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff6b35;
+}
+
+.footer-links h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter-form input {
+  padding: 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #e55a2b;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.copyright .fa-heart {
+  color: #ff6b35;
+  margin: 0 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-image {
+    width: 60%;
+  }
+  
+  .animated-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .nav-links {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    margin: 5px 15px;
+  }
+  
+  .hero {
+    height: 80vh;
+  }
+  
+  .hero-image {
+    width: 80%;
+  }
+  
+  .animated-text {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-section {
+    width: 100%;
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 70vh;
+  }
+  
+  .animated-text {
+    font-size: 2.2rem;
+  }
+  
+  .feature-card {
+    padding: 20px;
+  }
+  
+  .faq-question {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+  }
+  
+  .faq-answer {
+    padding: 0 20px;
+  }
+  
+  .faq-item.active .faq-answer {
+    padding: 0 20px 15px;
+  }
+}
+/* Add this to your existing HomePage.css file */
+
+/* Active state for navbar */
+.nav-links a.active {
+  color: #2a5bd7;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #2a5bd7;
+  border-radius: 2px;
+}
+
+/* Prevent scroll on links */
+a[href^="#"] {
+  cursor: pointer;
+}
+
+/* Update footer links to match */
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Smooth transition for active state */
+.nav-links a {
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+}
