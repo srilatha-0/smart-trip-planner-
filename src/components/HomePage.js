@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './HomePage.css';
 import { Link } from "react-router-dom";
 
@@ -51,20 +51,6 @@ const HomePage = () => {
     }
   ];
 
-  const toggleFaq = (id) => {
-    setActiveFaq(activeFaq === id ? null : id);
-  };
-
-  useEffect(() => {
-    const textElement = document.querySelector('.animated-text');
-    if (textElement) {
-      textElement.style.animation = 'none';
-      setTimeout(() => {
-        textElement.style.animation = 'textAnimation 1.5s ease-out forwards';
-      }, 10);
-    }
-  }, []);
-
   return (
     <div className="home-page">
 
@@ -81,7 +67,6 @@ const HomePage = () => {
             </a>
           </li>
 
-          {/* ✅ Fixed Discover Trips Routing */}
           <li>
             <Link
               to="/DiscoverTrips"
